@@ -1,0 +1,275 @@
+/* General Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #666;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #e30613;
+}
+
+/* Hero Section */
+.hero {
+    height: 600px;
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background: #e30613;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #b3050f;
+}
+
+/* Sections */
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 36px;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: #e30613;
+}
+
+/* About Section */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-text h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Products Section */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: #fff;
+    padding: 60px 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-col h4 {
+    color: #e30613;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.footer-col p, .footer-col a {
+    color: #bbb;
+    font-size: 14px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    height: 150px;
+}
+
+.submit-btn {
+    background: #e30613;
+    color: #fff;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    header .container {
+        flex-direction: column;
+    }
+    
+    nav ul {
+        margin-top: 20px;
+    }
+    
+    nav ul li {
+        margin: 0 10px;
+    }
+}
